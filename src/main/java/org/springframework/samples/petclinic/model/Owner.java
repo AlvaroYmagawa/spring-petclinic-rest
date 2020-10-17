@@ -61,6 +61,10 @@ public class Owner extends Person {
     @NotEmpty
     private String city;
 
+    @Column(name = "enabled")
+    @NotEmpty
+    private Boolean enabled;
+
     @Column(name = "telephone")
     @NotEmpty
     @Digits(fraction = 0, integer = 10)
@@ -85,6 +89,15 @@ public class Owner extends Person {
     public void setCity(String city) {
         this.city = city;
     }
+
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
 
     public String getTelephone() {
         return this.telephone;

@@ -57,7 +57,8 @@ public class OwnerRestController {
 		if (ownerLastName == null) {
 			ownerLastName = "";
 		}
-		Collection<Owner> owners = this.clinicService.findOwnerByLastName(ownerLastName);
+        Collection<Owner> owners = this.clinicService.findOwnerByLastName(ownerLastName);
+
 		if (owners.isEmpty()) {
 			return new ResponseEntity<Collection<Owner>>(HttpStatus.NOT_FOUND);
 		}
