@@ -62,7 +62,6 @@ public class Owner extends Person {
     private String city;
 
     @Column(name = "enabled")
-    @NotEmpty
     private Boolean enabled;
 
     @Column(name = "telephone")
