@@ -59,13 +59,14 @@ public class JacksonCustomOwnerSerializer extends StdSerializer<Owner> {
 		jgen.writeStringField("address", owner.getAddress());
 		jgen.writeStringField("city", owner.getCity());
         jgen.writeStringField("telephone", owner.getTelephone());
+        jgen.writeBooleanField("enabled", owner.getEnabled());
 
         // Convert boolen enabled owner flag, to semantic string
-        if(owner.getEnabled()){
-            jgen.writeStringField("enabled", "ativo");
-        }else{
-            jgen.writeStringField("enabled", "inativo");
-        }
+        // if(owner.getEnabled()){
+        //     jgen.writeStringField("enabled", "ativo");
+        // }else{
+        //     jgen.writeStringField("enabled", "inativo");
+        // }
 
 		// write pets array
 		jgen.writeArrayFieldStart("pets");
